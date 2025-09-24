@@ -5,8 +5,9 @@ We welcome contributions to the Clean Code Advisor project! Please follow these 
 1. **Fork the repository**
 2. **Create a new branch** for your feature or bugfix
 3. **Make your changes**
-4. **Run tests** to ensure everything works correctly before submitting your pull request.
-5. **Submit a pull request**
+4. **Update the documentation** if necessary
+5. **Run tests** to ensure everything works correctly before submitting your pull request.
+6. **Submit a pull request**
 
 If you have any questions, feel free to reach out to the maintainers.
 
