@@ -9,21 +9,19 @@ const main = () => {
         process.exit(1);
     }
 
-    if (!fs.existsSync(filePath)) {
-        console.error('The provided path does not exist.');
-        process.exit(1);
-    }
-
-    const ext = path.extname(filePath);
-    if (ext !== '.js') {
-        console.error('Only JavaScript files are supported.');
-        process.exit(1);
-    }
-
     try {
+        if (!fs.existsSync(filePath)) {
+            throw new Error('The provided path does not exist.');
+        }
+
+        const ext = path.extname(filePath);
+        if (ext !== '.js') {
+            throw new Error('Only JavaScript files are supported.');
+        }
+
         analyzeCode(filePath);
     } catch (error) {
-        console.error('An error occurred while analyzing the code:', error.message);
+        console.error('An error occurred:', error.message);
         process.exit(1);
     }
 };
