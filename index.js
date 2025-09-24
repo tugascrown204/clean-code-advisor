@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const { analyzeCode } = require('./src/analyzer');
 
 const main = () => {
@@ -10,6 +11,12 @@ const main = () => {
 
     if (!fs.existsSync(filePath)) {
         console.error('The provided path does not exist.');
+        process.exit(1);
+    }
+
+    const ext = path.extname(filePath);
+    if (ext !== '.js') {
+        console.error('Only JavaScript files are supported.');
         process.exit(1);
     }
 
