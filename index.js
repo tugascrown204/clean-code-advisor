@@ -11,17 +11,19 @@ const main = () => {
 
     try {
         if (!fs.existsSync(filePath)) {
-            throw new Error('The provided path does not exist.');
+            console.error('The provided path does not exist.');
+            process.exit(1);
         }
 
         const ext = path.extname(filePath);
         if (ext !== '.js') {
-            throw new Error('Only JavaScript files are supported.');
+            console.error('Only JavaScript files are supported.');
+            process.exit(1);
         }
 
         analyzeCode(filePath);
     } catch (error) {
-        console.error('An error occurred:', error.message);
+        console.error('An unexpected error occurred:', error.message);
         process.exit(1);
     }
 };
