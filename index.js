@@ -13,7 +13,12 @@ const main = () => {
         process.exit(1);
     }
 
-    analyzeCode(filePath);
+    try {
+        analyzeCode(filePath);
+    } catch (error) {
+        console.error('An error occurred while analyzing the code:', error.message);
+        process.exit(1);
+    }
 };
 
 main();
