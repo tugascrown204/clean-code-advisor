@@ -7,7 +7,8 @@ We welcome contributions to the Clean Code Advisor project! Please follow these 
 3. **Make your changes**
 4. **Update the documentation** if necessary
 5. **Run tests** to ensure everything works correctly before submitting your pull request.
-6. **Submit a pull request**
+6. **Ensure code formatting is consistent** with the project's style guide.
+7. **Submit a pull request**
 
 If you have any questions, feel free to reach out to the maintainers.
 
