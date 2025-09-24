@@ -8,6 +8,11 @@ const main = () => {
         process.exit(1);
     }
 
+    if (!fs.existsSync(filePath)) {
+        console.error('The provided path does not exist.');
+        process.exit(1);
+    }
+
     analyzeCode(filePath);
 };
 
