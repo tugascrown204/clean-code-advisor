@@ -5,13 +5,13 @@ const { analyzeCode } = require('./src/analyzer');
 const main = () => {
     const filePath = process.argv[2];
     if (!filePath) {
-        console.error('Please provide the path to the code file or directory.');
+        console.error('No file path specified. Please provide a valid path to a JavaScript file.');
         process.exit(1);
     }
 
     try {
         if (!fs.existsSync(filePath)) {
-            console.error('The provided path does not exist.');
+            console.error('The specified path does not exist.');
             process.exit(1);
         }
 
