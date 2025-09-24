@@ -1,6 +1,6 @@
 {
   "name": "clean-code-advisor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool for analyzing and improving code quality based on clean code principles.",
   "main": "index.js",
   "scripts": {
